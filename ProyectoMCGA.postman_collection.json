@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "0f27f942-34f7-4b63-b0b0-accd21017e41",
+		"name": "ProyectoMCGA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n}"
+						},
+						"url": {
+							"raw": "{{mcma}}/users/showall_user",
+							"host": [
+								"{{mcma}}"
+							],
+							"path": [
+								"users",
+								"showall_user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store Rol",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\" : \"Customer\" \r\n}"
+						},
+						"url": {
+							"raw": "{{mcma}}/users/addrol",
+							"host": [
+								"{{mcma}}"
+							],
+							"path": [
+								"users",
+								"addrol"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Usuario\",\r\n    \"address\" : \"Borrado\",\r\n    \"location\" : \"Rosario\",    \r\n    \"rol\" : \"615ee52513eb14ac2438d8ad\"\r\n}"
+						},
+						"url": {
+							"raw": "{{mcma}}/users/addUser",
+							"host": [
+								"{{mcma}}"
+							],
+							"path": [
+								"users",
+								"addUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mcma}}/users/61606879f30bab19e2c66050",
+							"host": [
+								"{{mcma}}"
+							],
+							"path": [
+								"users",
+								"61606879f30bab19e2c66050"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{mcma}}/users/61606879f30bab19e2c66050",
+							"host": [
+								"{{mcma}}"
+							],
+							"path": [
+								"users",
+								"61606879f30bab19e2c66050"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"German Eduardo Coudet \",\r\n    \"location\" : \"Rosario\",\r\n    \"rol\" : \"615fa37671e60c56fcf62df0\"\r\n}"
+						},
+						"url": {
+							"raw": "{{mcma}}/users/616061225772f2ee0e844168",
+							"host": [
+								"{{mcma}}"
+							],
+							"path": [
+								"users",
+								"616061225772f2ee0e844168"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SHOW ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{mcma}}/api/getmachines",
+					"host": [
+						"{{mcma}}"
+					],
+					"path": [
+						"api",
+						"getmachines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{mcma}}/api/machine/2",
+					"host": [
+						"{{mcma}}"
+					],
+					"path": [
+						"api",
+						"machine",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
