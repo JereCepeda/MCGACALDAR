@@ -38,7 +38,7 @@ const addRol = async (req,res) =>{
             role_id : req.body._id,
             description: req.body.description
         })
-        const newRol = await Rol.save(); 
+        const newRol = await Rol.save();
         return res.status(201).json({
             data : {role_id : newRol._id,
                     description : newRol.description},
@@ -48,7 +48,7 @@ const addRol = async (req,res) =>{
         return res.status(400).json({
             error: true,
             message: error,
-        })        
+        })
     }
 }
 
@@ -60,7 +60,7 @@ const addUser = async (req,res) =>{
             location : req.body.location,
             rol : req.body.rol,
         });
-        const newUser = await User.save();        
+        const newUser = await User.save();
         const response = await newUser.populate('rol')
         return res.status(201).json({
             data: response,
@@ -70,7 +70,7 @@ const addUser = async (req,res) =>{
         return res.status(400).json({
             error: error,
             message: error,
-        })        
+        })
     }
 }
 
@@ -85,7 +85,7 @@ const getUserById = async(req,res) => {
         return res.status(400).json({
             error: true,
             message: error,
-        })        
+        })
     }
 }
 
@@ -109,7 +109,7 @@ const editUser = async (req,res) => {
             name : req.body.name,
             address : req.body.address,
             location : req.body.location,
-            rol : req.body.rol, 
+            rol : req.body.rol,
         };
         const response = await uSchema.findOneAndUpdate({_id : req.params._id},User,{new : true})
         return res.status(200).json({
