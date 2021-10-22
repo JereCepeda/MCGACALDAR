@@ -1,1 +1,1 @@
-web: node MCMA/index.js
+web: node src/index.js
