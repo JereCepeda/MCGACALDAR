@@ -4,7 +4,7 @@ const boilerTypeSchema = require('../../models/BoilerType');
 
 const indexBoilers = async (req,res) =>{
     try{
-        const boiler = await boilerSchema.find().populate('boilerType');
+        const boiler = await boilerSchema.find().populate('BoilerType');
         return res.status(200).json(boiler);
         }
     catch(error){
@@ -57,7 +57,7 @@ const addBoiler = async (req,res) =>{
             boilerType : req.body.BoilerType
         });
         const newBoiler = await Boiler.save();
-        const response = await newBoiler.populate('boilerType')
+        const response = await newBoiler.populate('BoilerType')
         return res.status(201).json({
             data: response,
             error: false,
